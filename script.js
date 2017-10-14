@@ -149,16 +149,16 @@ function chooseEquation(sign, a, b){
 	let equalsTo;
 	switch(sign){
 		case "+":
-		  equalsTo = a + b;
+		  equalsTo = parseFloat(a + b).toFixed(5).replace(/\.?0+$/, "");
 		  break;
 		case "−":
-		  equalsTo = a - b;
+		  equalsTo = parseFloat(a - b).toFixed(5).replace(/\.?0+$/, "");
 		  break;
 		case "∗":
-		  equalsTo = a * b;
+		  equalsTo = parseFloat(a * b).toFixed(5).replace(/\.?0+$/, "");
 		  break;
 		case "÷":
-		  equalsTo = a / b;
+		  equalsTo = parseFloat(a / b).toFixed(5).replace(/\.?0+$/, "");
 		  break;
 	}
 	return equalsTo;
@@ -187,7 +187,7 @@ function newEquationResultShown(number, sign){
 	number = checkNegative(number);
 	numbersArray.push(number);
 	result = numbersArray[0];
-	input.value = number;
+	input.value = parseFloat(number).toFixed(5);
 	equationText.textContent += number + sign;
 	resultShown = true;
 	resetFlags();
