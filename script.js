@@ -61,17 +61,6 @@ function writeInput(button){
 	 }
 	 
 }
-function numberWithSpace(x) {
-	console.log('changed');
-	x = this.textContent;
-    var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    return parts.join(".");
-}
-function numberWithoutSpaces(x){
-	let string = x.replace(/\s/g, "");
-	return string;
-}
 // operation functions --------------------------------
 
 function clearAll(){
