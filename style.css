@@ -1,0 +1,223 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background: url("imgs/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+header h1 {
+  margin-top: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem; }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60rem;
+  margin: 0 auto;
+  padding: 0 0 3rem 0;
+  border-radius: 1.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75); }
+  section .calc-input {
+    width: 100%;
+    background: none;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem; }
+    section .calc-input form {
+      padding: 1.5rem;
+      position: relative;
+      font-family: "Roboto", sans-serif; }
+      section .calc-input form span {
+        position: absolute;
+        top: 0;
+        left: 4rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        padding: .8rem 0;
+        background-color: orange;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        visibility: hidden; }
+      section .calc-input form .minus {
+        visibility: visible; }
+      section .calc-input form p {
+        height: 4rem;
+        word-wrap: break-word;
+        overflow: auto;
+        margin: 0;
+        font-size: 1.6rem;
+        font-family: "Roboto", sans-serif; }
+      section .calc-input form input {
+        background: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        font-size: 4rem;
+        text-align: right; }
+  section .calc-buttons {
+    padding: 1.5rem; }
+    section .calc-buttons__operations {
+      float: left;
+      width: 80%;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      section .calc-buttons__operations button {
+        font-family: "Roboto", sans-serif;
+        border: none;
+        outline: none;
+        font-size: 2.5rem;
+        flex: 1 30%;
+        padding: 0.8rem;
+        border-radius: .5rem;
+        margin: 0.5rem;
+        transition: 0.4s;
+        z-index: 10;
+        position: relative;
+        flex: 1 20%;
+        background-color: rgba(221, 65, 66, 0.8);
+        box-shadow: none;
+        overflow: hidden; }
+        section .calc-buttons__operations button:nth-child(4) {
+          background: AntiqueWhite; }
+        section .calc-buttons__operations button:after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: "";
+          z-index: 0;
+          width: 105%;
+          height: 0;
+          border-radius: .5rem;
+          background-color: #b4d445; }
+        section .calc-buttons__operations button:hover:after {
+          z-index: -1;
+          height: 100%;
+          transition: 0.3s;
+          box-shadow: none; }
+    section .calc-buttons__numbers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background: none;
+      float: left;
+      width: 80%; }
+      section .calc-buttons__numbers button {
+        font-family: "Roboto", sans-serif;
+        border: none;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: White;
+        font-size: 2.5rem;
+        flex: 1 30%;
+        padding: 0.8rem;
+        border-radius: .5rem;
+        margin: 2.5rem 0.5rem;
+        transition: 0.4s; }
+        section .calc-buttons__numbers button:hover {
+          cursor: pointer;
+          -webkit-box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.15);
+          background-color: grey; }
+        section .calc-buttons__numbers button:last-child {
+          flex: 2 60%; }
+    section .calc-buttons__functions {
+      float: left;
+      width: 19%;
+      background: none;
+      display: flex;
+      flex-wrap: no-wrap;
+      flex-direction: column;
+      align-items: center; }
+      section .calc-buttons__functions button {
+        font-family: "Roboto", sans-serif;
+        position: relative;
+        z-index: 10;
+        font-size: 3rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        margin: 0.7rem;
+        padding: 1rem;
+        border: none;
+        outline: none;
+        -webkit-box-shadow: 6px 5px 24px -4px rgba(0, 0, 0, 0.39);
+        -moz-box-shadow: 6px 5px 24px -4px rgba(0, 0, 0, 0.39);
+        box-shadow: 6px 5px 24px -4px rgba(0, 0, 0, 0.39);
+        transition: 0.4s; }
+        section .calc-buttons__functions button:after {
+          z-index: -1;
+          position: absolute;
+          content: "";
+          background: #333;
+          width: 4.8rem;
+          height: 4.8rem;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          margin-top: -2.4rem;
+          margin-left: -2.4rem;
+          transform: scale(0);
+          transition: 0.4s; }
+        section .calc-buttons__functions button:nth-child(1) {
+          background: limegreen; }
+        section .calc-buttons__functions button:nth-child(2) {
+          background: yellow; }
+        section .calc-buttons__functions button:nth-child(3) {
+          background: aqua; }
+        section .calc-buttons__functions button:nth-child(4) {
+          background: pink; }
+        section .calc-buttons__functions button:nth-child(5) {
+          background: orange; }
+        section .calc-buttons__functions button:hover {
+          color: white;
+          cursor: pointer; }
+          section .calc-buttons__functions button:hover:after {
+            transform: scale(1); }
+
+@media screen and (max-width: 630px) and (min-width: 430px) {
+  section {
+    width: 100%; } }
+@media screen and (max-width: 429px) {
+  section {
+    width: 100%; }
+    section .calc-buttons {
+      padding: 1rem; }
+      section .calc-buttons__operations {
+        width: 100%; }
+        section .calc-buttons__operations button {
+          font-size: 1.7rem;
+          padding: 0.5rem; }
+      section .calc-buttons__numbers button {
+        padding: 0.5rem;
+        font-size: 1.7rem;
+        flex: 1 28%; }
+      section .calc-buttons__functions button {
+        font-size: 2rem;
+        margin: 1rem 0.7rem;
+        height: 4.8rem;
+        width: 4.8rem; }
+        section .calc-buttons__functions button:after {
+          height: 3.6rem;
+          width: 3.6rem;
+          margin-top: -1.8rem;
+          margin-left: -1.8rem; } }
+
+/*# sourceMappingURL=style.css.map */
