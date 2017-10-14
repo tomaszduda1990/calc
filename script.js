@@ -187,7 +187,7 @@ function newEquationResultShown(number, sign){
 	number = checkNegative(number);
 	numbersArray.push(number);
 	result = numbersArray[0];
-	input.value = parseFloat(number).toFixed(5);
+	input.value = parseFloat(number).toFixed(5).replace(/\.?0+$/, "");
 	equationText.textContent += number + sign;
 	resultShown = true;
 	resetFlags();
